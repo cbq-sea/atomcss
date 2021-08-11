@@ -1,0 +1,69 @@
+// ma mh mv mt mb ml mr
+// pa ph pv pt pb pl pr
+@baseDistance: 1px;
+
+.generate-mp(@i: 0) when(@i <=100 ) {
+  .ma@{i} {
+    margin: @i * @baseDistance;
+  }
+
+  .mh@{i} {
+    margin-left: @i * @baseDistance;
+    margin-right: @i * @baseDistance;
+  }
+
+  .mv@{i} {
+    margin-top: @i * @baseDistance;
+    margin-bottom: @i * @baseDistance;
+  }
+
+  .mt@{i} {
+    margin-top: @i * @baseDistance;
+  }
+
+  .mb@{i} {
+    margin-bottom: @i * @baseDistance;
+  }
+
+  .ml@{i} {
+    margin-left: @i * @baseDistance;
+  }
+
+  .mr@{i} {
+    margin-right: @i * @baseDistance;
+  }
+
+  .pa@{i} {
+    padding: @i * @baseDistance;
+  }
+
+  .ph@{i} {
+    padding-left: @i * @baseDistance;
+    padding-right: @i * @baseDistance;
+  }
+
+  .pv@{i} {
+    padding-top: @i * @baseDistance;
+    padding-bottom: @i * @baseDistance;
+  }
+
+  .pt@{i} {
+    padding-top: @i * @baseDistance;
+  }
+
+  .pb@{i} {
+    padding-bottom: @i * @baseDistance;
+  }
+
+  .pl@{i} {
+    padding-left: @i * @baseDistance;
+  }
+
+  .pr@{i} {
+    padding-right: @i * @baseDistance;
+  }
+
+  .generate-mp(@i + 1);
+}
+
+.generate-mp();
